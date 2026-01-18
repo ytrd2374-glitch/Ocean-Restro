@@ -1,58 +1,139 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ocean Restro Bakery & Restaurant</title>
+    <title>Ocean Restro Bakery & Restaurant | VIP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; }
-        header { background-color: #1a73e8; color: white; text-align: center; padding: 30px; }
-        nav { background-color: #202124; color: white; padding: 12px; text-align: center; position: sticky; top: 0; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        section { padding: 25px; margin: 20px auto; max-width: 800px; background-color: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .rating { color: #fbbc04; font-size: 1.2rem; font-weight: bold; }
-        .status { color: #1e8e3e; font-weight: bold; }
-        .badge { background: #e8f0fe; color: #1967d2; padding: 5px 10px; border-radius: 4px; font-size: 0.9em; }
-        footer { text-align: center; padding: 20px; background-color: #202124; color: white; margin-top: 40px; }
-        .map-link { display: inline-block; background: #1a73e8; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 10px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        
+        body { 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            padding-bottom: 50px;
+        }
+
+        /* Hero Section */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        h1 { font-size: 2.5rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
+        .subtitle { font-size: 1.1rem; color: #ccc; }
+
+        section { padding: 30px 20px; max-width: 1000px; margin: auto; }
+        h2 { border-left: 4px solid #1a73e8; padding-left: 15px; margin-bottom: 20px; font-size: 1.5rem; }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .btn-call { background-color: #1a73e8; color: white; }
+        .btn-whatsapp { background-color: #25d366; color: white; }
+        .btn:active { transform: scale(0.95); }
+
+        /* VIP Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: 150px;
+            border-radius: 15px;
+            object-fit: cover;
+            border: 2px solid rgba(255,255,255,0.1);
+            transition: 0.3s;
+        }
+
+        /* Info Card */
+        .vip-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            margin-top: 20px;
+        }
+
+        .status-tag {
+            background: #1e8e3e;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        footer { text-align: center; opacity: 0.6; font-size: 0.8rem; margin-top: 50px; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Ocean Restro Bakery & Restaurant</h1>
-        <p>Bakery | Restaurant | Family Friendly</p>
+        <p class="subtitle">Bakery | Restaurant | Family Friendly</p>
     </header>
-    
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#info">Details</a>
-        <a href="#location">Location</a>
-    </nav>
-    
-    <section id="home">
+
+    <section>
+        <div class="status-tag">● Open Now (Until 10 PM)</div>
         <h2>Welcome</h2>
-        <p class="rating">⭐ 5.0 (19 Reviews)</p>
-        <p>A perfect place for your family outings and delicious bakery treats. We pride ourselves on quality and taste.</p>
-        <p class="badge">Budget: ₹1–200 per person</p>
+        <p style="margin-bottom: 20px; line-height: 1.6;">Experience the best flavors in town. From fresh bakery delights to delicious family dinners.</p>
+
+        <div class="action-buttons">
+            <a href="tel:+91 9771145030" class="btn btn-call">
+                <i class="fas fa-phone-alt"></i> CALL NOW
+            </a>
+            <a href="https://wa.me/91 9771145030?text=Hello%20Ocean%20Restro" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp Us
+            </a>
+        </div>
+
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=80" class="gallery-item" alt="Food">
+            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=300&q=80" class="gallery-item" alt="Interior">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=300&q=80" class="gallery-item" alt="Pizza">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=300&q=80" class="gallery-item" alt="Non-Veg">
+        </div>
+
+        <div class="vip-card">
+            <h3>Contact Section</h3>
+            <p><i class="fas fa-map-marker-alt" style="color: #1a73e8; margin-right: 10px;"></i> Plus Code: 28M5+96J</p>
+            <p><i class="fas fa-star" style="color: #fbbc04; margin-right: 10px;"></i> 5.0 Rating (19 Reviews)</p>
+        </div>
     </section>
-    
-    <section id="info">
-        <h2>Restaurant Info</h2>
-        <p><strong>Status:</strong> <span class="status">Open</span> - Closes 10:00 PM</p>
-        <p><strong>Category:</strong> Family Restaurant & Bakery</p>
-        <p><strong>Specialties:</strong> Freshly baked goods, snacks, and full-course family meals.</p>
-    </section>
-    
-    <section id="location">
-        <h2>Find Us</h2>
-        <p><strong>Plus Code:</strong> 28M5+96J</p>
-        <p><strong>Address:</strong> Near Ayushi General Store, Main Road Area.</p>
-        <a href="https://www.google.com/maps/search/28M5%2B96J+Ocean+Restaurant" target="_blank" class="map-link">View on Google Maps</a>
-    </section>
-    
+
     <footer>
-        <p>&copy; 2024 Ocean Restro Bakery & Restaurant. All rights reserved.</p>
+        <p>&copy; 2026 Ocean Restro Bakery & Restaurant</p>
     </footer>
 
 </body>
